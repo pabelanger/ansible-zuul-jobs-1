@@ -1,0 +1,4 @@
+flake8
+sphinx
+yamllint
+zuul-sphinx>=0.2.0
