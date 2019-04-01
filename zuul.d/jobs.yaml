@@ -1,9 +1,8 @@
 ---
 - job:
     name: base
-    parent: base-minimal
+    parent: base-minimal-test
     abstract: true
     description: |
       The base job for the Ansible installation of Zuul.
     pre-run: playbooks/base/pre.yaml
-    nodeset: centos-7-1vcpu
