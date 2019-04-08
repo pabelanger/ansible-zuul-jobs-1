@@ -22,3 +22,9 @@
     nodes:
       - name: fedora-29
         label: fedora-29-4vcpu
+
+- nodeset:
+    name: vyos-1.1.8-1vcpu
+    nodes:
+      - name: vyos-1.1.8
+        label: vyos-1.1.8-1vcpu

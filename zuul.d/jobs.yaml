@@ -27,3 +27,10 @@
     vars:
       tox_envlist: py37
     nodeset: fedora-latest-1vcpu
+
+- job:
+    name: vyos-test
+    parent: tox
+    vars:
+      tox_envlist: py37
+    nodeset: vyos-1.1.8-1vcpu

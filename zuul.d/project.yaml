@@ -2,3 +2,6 @@
 - project:
     templates:
       - ansible-python-jobs
+    jobs:
+      check:
+        - vyos-test
