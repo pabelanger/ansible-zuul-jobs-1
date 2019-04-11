@@ -32,3 +32,11 @@
     vars:
       tox_envlist: py37
     nodeset: fedora-latest-1vcpu
+
+- job:
+    name: ansible-network-vyos-base
+    pre-run: playbooks/ansible-network-vyos-base/pre.yaml
+    host-vars:
+      vyos-1.1.8:
+        ansible_python_interpreter: python
+    nodeset: vyos-1.1.8-python3

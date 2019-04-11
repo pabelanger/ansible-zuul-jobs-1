@@ -1,0 +1,8 @@
+---
+- hosts: controller
+  tasks:
+    - name: Run write-inventory role
+      include_role:
+        name: write-inventory
+      vars:
+        write_inventory_dest: ~/.inventory.yaml
