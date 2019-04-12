@@ -26,3 +26,9 @@
     name: ansible-tox-py37
     parent: tox-py37
     nodeset: fedora-latest-1vcpu
+
+- job:
+    name: ansible-build-python-tarball
+    pre-run: playbooks/ansible-build-python-tarball/pre.yaml
+    run: playbooks/ansible-build-python-tarball/run.yaml
+    nodeset: fedora-latest-1vcpu
