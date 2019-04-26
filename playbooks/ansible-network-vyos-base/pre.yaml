@@ -36,6 +36,6 @@
         chdir: ~/src/github.com/ansible/ansible-zuul-jobs
 
     - name: ansible
-      shell: .tox/venv/bin/ansible-playbook -v -c network_cli playbooks/ansible-network-vyos-base/files/bootstrap.yaml
+      shell: .tox/venv/bin/ansible-playbook -vvvv -c network_cli playbooks/ansible-network-vyos-base/files/bootstrap.yaml
       args:
         chdir: ~/src/github.com/ansible/ansible-zuul-jobs
