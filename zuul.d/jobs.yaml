@@ -70,3 +70,10 @@
     required-projects:
       - name: github.com/ansible/ansible-zuul-jobs
     nodeset: vyos-1.1.8-python3
+
+- job:
+    name: ansible-test-network-vyos-appliance
+    parent: ansible-network-vyos-appliance
+    run: playbooks/ansible-test-network-vyos-appliance/run.yaml
+    required-projects:
+      - name: github.com/ansible/ansible
