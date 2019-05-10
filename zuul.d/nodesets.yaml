@@ -40,7 +40,22 @@
           - fedora-29
 
 - nodeset:
-    name: vyos-1.1.8-python3
+    name: vyos-1.1.8-python27
+    nodes:
+      - name: centos-7
+        label: centos-7-1vcpu
+      - name: vyos-1.1.8
+        label: vyos-1.1.8-1vcpu
+    groups:
+      - name: appliance
+        nodes:
+          - vyos-1.1.8
+      - name: controller
+        nodes:
+          - centos-7
+
+- nodeset:
+    name: vyos-1.1.8-python37
     nodes:
       - name: fedora-29
         label: fedora-29-1vcpu
