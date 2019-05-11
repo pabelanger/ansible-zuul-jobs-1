@@ -81,6 +81,20 @@
     timeout: 7200
 
 - job:
+    name: ansible-test-network-integration-eos-python36
+    parent: ansible-test-network-integration-eos
+    nodeset: eos-1.1.8-python36
+    vars:
+      ansible_test_python: 3.6
+
+- job:
+    name: ansible-test-network-integration-eos-python37
+    parent: ansible-test-network-integration-eos
+    nodeset: eos-1.1.8-python37
+    vars:
+      ansible_test_python: 3.7
+
+- job:
     name: ansible-test-network-integration-vyos
     abstract: true
     parent: ansible-network-vyos-appliance
