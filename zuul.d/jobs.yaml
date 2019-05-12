@@ -75,10 +75,12 @@
     name: ansible-test-network-integration-eos
     parent: ansible-network-eos-appliance
     pre-run: playbooks/ansible-test-network-integration-eos/pre.yaml
-    run: playbooks/ansible-test-network-integration-eos/run.yaml
+    run: playbooks/ansible-test-network-integration-base/run.yaml
     required-projects:
       - name: github.com/ansible/ansible
     timeout: 7200
+    vars:
+      ansible_test_network_integration: eos
 
 - job:
     name: ansible-test-network-integration-eos-python27
@@ -106,10 +108,12 @@
     abstract: true
     parent: ansible-network-vyos-appliance
     pre-run: playbooks/ansible-test-network-integration-vyos/pre.yaml
-    run: playbooks/ansible-test-network-integration-vyos/run.yaml
+    run: playbooks/ansible-test-network-integration-base/run.yaml
     required-projects:
       - name: github.com/ansible/ansible
     timeout: 3600
+    vars:
+      ansible_test_network_integration: vyos
 
 - job:
     name: ansible-test-network-integration-vyos-python27
