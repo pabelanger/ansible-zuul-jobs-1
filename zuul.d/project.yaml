@@ -4,9 +4,7 @@
       - ansible-python-jobs
     check:
       jobs:
-        - ansible-network-eos-appliance
-        - ansible-network-junos-appliance
-        - ansible-network-vyos-appliance
+        - ansible-test-network-integration-junos-python36
     gate:
       jobs:
         - ansible-network-eos-appliance
