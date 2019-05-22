@@ -19,6 +19,9 @@
     - name: Create virtualenv for ansible-test
       shell: "virtualenv {{ _virtualenv_options }} ~/venv"
 
+    - name: Install ara into virtuelenv
+      shell: ~/venv/bin/pip install ara
+
     - name: Setup base test_options
       set_fact:
         _test_options: "--continue-on-error --diff --requirements"
@@ -41,4 +44,4 @@
       args:
         chdir: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible/ansible'].src_dir }}"
         executable: /bin/bash
-      shell: "source ~/venv/bin/activate; ./test/runner/ansible-test network-integration {{ _test_options }} --python {{ ansible_test_python }} --inventory /home/zuul/inventory {{ _target }} -vv"
+      shell: "source ~/venv/bin/activate; ANSIBLE_CALLBACK_PLUGINS=$(python -m ara.setup.callback_plugins) ./test/runner/ansible-test network-integration {{ _test_options }} --python {{ ansible_test_python }} --inventory /home/zuul/inventory {{ _target }} -vv"
