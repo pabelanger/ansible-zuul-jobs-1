@@ -87,8 +87,8 @@
 - nodeset:
     name: ios-15.6-2T-python27
     nodes:
-      - name: centos-7
-        label: centos-7-1vcpu
+      - name: ubuntu-bionic
+        label: ubuntu-bionic-1vcpu
       - name: ios-15.6-2T
         label: iosv-15.6-2T
     groups:
@@ -97,7 +97,7 @@
           - ios-15.6-2T
       - name: controller
         nodes:
-          - centos-7
+          - ubuntu-bionic
 
 - nodeset:
     name: ios-15.6-2T-python35
