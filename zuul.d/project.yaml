@@ -4,15 +4,7 @@
       - ansible-python-jobs
     check:
       jobs:
-        - ansible-network-eos-appliance
-        - ansible-network-ios-appliance
-        - ansible-network-junos-appliance
-        - ansible-network-openvswitch-appliance
-        - ansible-network-vyos-appliance
-    gate:
-      jobs:
-        - ansible-network-eos-appliance
-        - ansible-network-ios-appliance
-        - ansible-network-junos-appliance
-        - ansible-network-openvswitch-appliance
-        - ansible-network-vyos-appliance
+        - ansible-test-network-integration-openvswitch-python27
+        - ansible-test-network-integration-openvswitch-python35
+        - ansible-test-network-integration-openvswitch-python36
+        - ansible-test-network-integration-openvswitch-python37
