@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: Install openvswitch package
+      become: true
+      package:
+        name: openvswitch
+        state: installed
