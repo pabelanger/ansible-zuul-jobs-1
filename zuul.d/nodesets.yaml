@@ -145,6 +145,21 @@
           - fedora-29
 
 - nodeset:
+    name: iosxrv-6.1.3-python27
+    nodes:
+      - name: ubuntu-bionic
+        label: ubuntu-bionic-1vcpu
+      - name: iosxrv-6.1.3
+        label: iosxrv-6.1.3-20190604
+    groups:
+      - name: appliance
+        nodes:
+          - iosxrv-6.1.3
+      - name: controller
+        nodes:
+          - ubuntu-bionic
+
+- nodeset:
     name: openvswitch-2.9.0-python27
     nodes:
       - name: ubuntu-bionic
