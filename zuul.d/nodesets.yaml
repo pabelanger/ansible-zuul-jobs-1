@@ -195,7 +195,7 @@
       - name: fedora-29
         label: fedora-29-1vcpu
       - name: iosxr-6.1.3
-        label: iosxr-6.1.3
+        label: iosxrv-6.1.3
     groups:
       - name: appliance
         nodes:
