@@ -63,6 +63,6 @@
 
     - name: Run the integration test suite
       args:
-        chdir: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible/ansible'].src_dir }}"
+        chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
         executable: /bin/bash
       shell: "source ~/venv/bin/activate; ./test/runner/ansible-test network-integration {{ _test_options }} --python {{ ansible_test_python }} --inventory /home/zuul/inventory -vvvv {{ _target }}"
