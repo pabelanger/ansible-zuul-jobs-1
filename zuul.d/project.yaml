@@ -10,6 +10,7 @@
         - ansible-network-junos-appliance
         - ansible-network-openvswitch-appliance
         - ansible-network-vyos-appliance
+        - ansible-test-sanity
     gate:
       jobs:
         - ansible-network-eos-appliance
