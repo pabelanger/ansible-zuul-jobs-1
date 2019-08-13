@@ -26,6 +26,12 @@
 
 - project-template:
     name: ansible-test-network-integration
+    experimental:
+      jobs:
+        - ansible-test-network-integration-eos-python27:
+            branches:
+              - devel
+              - stable-2.8
     periodic:
       jobs:
         - ansible-test-network-integration-eos-python27:
