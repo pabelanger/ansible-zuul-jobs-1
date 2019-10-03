@@ -383,3 +383,18 @@
       - name: controller
         nodes:
           - fedora-29
+
+- nodeset:
+    name: vyos-1.1.8-python38
+    nodes:
+      - name: fedora-30
+        label: fedora-30-1vcpu
+      - name: vyos-1.1.8
+        label: vyos-1.1.8-1vcpu
+    groups:
+      - name: appliance
+        nodes:
+          - vyos-1.1.8
+      - name: controller
+        nodes:
+          - fedora-30
