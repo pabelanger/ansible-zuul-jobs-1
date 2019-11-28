@@ -103,7 +103,7 @@
         ansible_network_os: junos
     required-projects:
       - name: github.com/ansible/ansible-zuul-jobs
-    nodeset: vsrx3-18.4R1-python37
+    nodeset: vsrx3-18.4R1-python36
 
 - job:
     name: ansible-network-openvswitch-appliance
