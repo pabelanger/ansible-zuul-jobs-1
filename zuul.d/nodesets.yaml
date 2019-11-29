@@ -79,8 +79,8 @@
 - nodeset:
     name: eos-4.20.10-python36
     nodes:
-      - name: ubuntu-bionic
-        label: ubuntu-bionic-1vcpu
+      - name: centos-8
+        label: centos-8-1vcpu
       - name: eos-4.20.10
         label: eos-4.20.10
     groups:
@@ -89,7 +89,7 @@
           - eos-4.20.10
       - name: controller
         nodes:
-          - ubuntu-bionic
+          - centos-8
 
 - nodeset:
     name: eos-4.20.10-python37
