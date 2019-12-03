@@ -998,6 +998,9 @@
               - ^test/integration/targets/junos_.*
               - ^test/integration/targets/netconf_.*
               - ^test/integration/targets/prepare_junos_tests/.*
+        - ansible-test-network-integration-nxos-python36:
+            branches:
+              - devel
         - ansible-test-network-integration-openvswitch-python27:
             branches:
               - devel

@@ -401,6 +401,29 @@
       ansible_test_network_integration: netconf
 
 - job:
+    name: ansible-test-network-integration-nxos
+    abstract: true
+    dependencies:
+      - name: build-ansible-collection
+        soft: true
+    parent: ansible-network-nxos-appliance
+    pre-run: playbooks/ansible-test-network-integration-base/pre.yaml
+    run: playbooks/ansible-test-network-integration-base/run.yaml
+    post-run: playbooks/ansible-test-network-integration-base/post.yaml
+    required-projects:
+      - name: github.com/ansible/ansible
+    timeout: 9000
+    vars:
+      ansible_test_network_integration: nxos
+
+- job:
+    name: ansible-test-network-integration-nxos-python36
+    parent: ansible-test-network-integration-nxos
+    nodeset: nxos-7.0.3-python36
+    vars:
+      ansible_test_python: 3.6
+
+- job:
     name: ansible-test-network-integration-openvswitch
     abstract: true
     parent: ansible-network-openvswitch-appliance
