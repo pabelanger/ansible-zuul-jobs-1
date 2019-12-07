@@ -23,7 +23,7 @@
     pre-run:
       - playbooks/ansible-test-integration-base/pre.yaml
       - playbooks/ansible-test-cloud-integration-base/pre.yaml
-    run: playbooks/ansible-test-cloud-integration-base/run.yaml
+    run: playbooks/ansible-test-integration-base/run.yaml
     post-run: playbooks/ansible-test-integration-base/post.yaml
     required-projects:
       - name: github.com/ansible/ansible
