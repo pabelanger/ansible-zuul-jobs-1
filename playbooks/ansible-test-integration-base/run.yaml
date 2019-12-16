@@ -43,6 +43,11 @@
             download_artifact_type:
               - ansible_collection
 
+        - name: Install ansible-minimal
+          args:
+            chdir: "{{ ansible_user_dir }}/downloads"
+          shell: ~/venv/bin/pip install ansible*.tar.gz
+
         - name: Install jq
           become: true
           package:
