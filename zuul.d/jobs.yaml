@@ -70,6 +70,8 @@
     name: ansible-network-appliance-base
     pre-run: playbooks/ansible-network-appliance-base/pre.yaml
     post-run: playbooks/ansible-network-appliance-base/post.yaml
+    files:
+      - playbooks/ansible-network-appliance-base/.*
 
 - job:
     name: ansible-network-eos-appliance
