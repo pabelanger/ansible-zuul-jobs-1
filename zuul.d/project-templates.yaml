@@ -49,7 +49,10 @@
     name: ansible-collections-arista-eos
     check:
       jobs:
-        - ansible-test-network-integration-eos-python27:
+        - ansible-test-network-integration-eos-httpapi-python27:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python27:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-python27-stable29:
@@ -82,7 +85,10 @@
     gate:
       queue: integrated
       jobs:
-        - ansible-test-network-integration-eos-python27:
+        - ansible-test-network-integration-eos-httpapi-python27:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python27:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-python27-stable29:
