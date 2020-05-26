@@ -871,10 +871,16 @@
     name: ansible-collections-vyos-vyos
     check:
       jobs:
-        - ansible-test-network-integration-vyos-python27:
+        - ansible-test-network-integration-vyos-local-python27:
             vars:
               ansible_test_collections: true
-        - ansible-test-network-integration-vyos-python27-stable29:
+        - ansible-test-network-integration-vyos-network_cli-python27:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-vyos-local-python27-stable29:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-vyos-network_cli-python27-stable29:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-vyos-python35:
