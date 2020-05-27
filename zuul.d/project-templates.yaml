@@ -309,7 +309,10 @@
     name: ansible-collections-cisco-ios
     check:
       jobs:
-        - ansible-test-network-integration-ios-python27:
+        - ansible-test-network-integration-ios-local-python27:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-ios-network_cli-python27:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-ios-python27-stable29:
@@ -342,7 +345,10 @@
     gate:
       queue: integrated
       jobs:
-        - ansible-test-network-integration-ios-python27:
+        - ansible-test-network-integration-ios-local-python27:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-ios-network_cli-python27:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-ios-python27-stable29:

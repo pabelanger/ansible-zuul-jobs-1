@@ -590,6 +590,34 @@
       ansible_test_integration_targets: "tests/unit/modules/network/ios/test_ios.*"
 
 - job:
+    name: ansible-test-network-integration-ios-local
+    parent: ansible-test-network-integration-ios
+    abstract: true
+    vars:
+      ansible_test_skip_tags: network_cli
+
+- job:
+    name: ansible-test-network-integration-ios-network_cli
+    parent: ansible-test-network-integration-ios
+    abstract: true
+    vars:
+      ansible_test_skip_tags: local
+
+- job:
+    name: ansible-test-network-integration-ios-local-python27
+    parent: ansible-test-network-integration-ios-local
+    nodeset: ios-15.6-2T-python27
+    vars:
+      ansible_test_python: 2.7
+
+- job:
+    name: ansible-test-network-integration-ios-network_cli-python27
+    parent: ansible-test-network-integration-ios-network_cli
+    nodeset: ios-15.6-2T-python27
+    vars:
+      ansible_test_python: 2.7
+
+- job:
     name: ansible-test-network-integration-ios-python27
     parent: ansible-test-network-integration-ios
     nodeset: ios-15.6-2T-python27
