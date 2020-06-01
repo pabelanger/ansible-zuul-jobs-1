@@ -88,6 +88,24 @@
       release_python: python3
 
 - job:
+    name: ansible-test-sanity-base
+    parent: unittests
+    nodeset: controller-python38
+    abstract: true
+    dependencies:
+      - name: build-ansible-collection
+        soft: true
+    pre-run:
+      - playbooks/ansible-test-base/pre.yaml
+    run: playbooks/ansible-test-base/run.yaml
+    required-projects:
+      - name: github.com/ansible/ansible
+    timeout: 3600
+    vars:
+      ansible_test_python: 3.8
+      ansible_test_command: sanity
+
+- job:
     name: ansible-network-appliance-base
     pre-run: playbooks/ansible-network-appliance-base/pre.yaml
     post-run: playbooks/ansible-network-appliance-base/post.yaml
@@ -1310,6 +1328,16 @@
     vars:
       ansible_test_python: 3.8
       ansible_test_command: units
+
+- job:
+    name: ansible-test-sanity-openvswitch
+    parent: ansible-test-sanity-base
+    required-projects:
+      - name: github.com/ansible-collections/openvswitch.openvswitch
+    timeout: 3600
+    vars:
+      ansible_collections_repo: github.com/ansible-collections/openvswitch.openvswitch
+      ansible_test_integration_targets: "tests/unit/modules/network/ovs/test_openvswitch_.*"
 
 - job:
     name: ansible-test-units-openvswitch
