@@ -51,6 +51,7 @@
     name: ansible-collections-arista-eos
     check:
       jobs:
+        - ansible-galaxy-importer
         - ansible-test-network-integration-eos-httpapi-python27:
             vars:
               ansible_test_collections: true
@@ -111,6 +112,7 @@
     gate:
       queue: integrated
       jobs:
+        - ansible-galaxy-importer
         - ansible-test-network-integration-eos-httpapi-python27:
             vars:
               ansible_test_collections: true
@@ -856,6 +858,7 @@
     name: ansible-collections-openvswitch-openvswitch
     check:
       jobs:
+        - ansible-galaxy-importer
         - ansible-test-network-integration-openvswitch-python27:
             vars:
               ansible_test_collections: true
@@ -889,6 +892,7 @@
     gate:
       queue: integrated
       jobs:
+        - ansible-galaxy-importer
         - ansible-test-network-integration-openvswitch-python27:
             vars:
               ansible_test_collections: true
