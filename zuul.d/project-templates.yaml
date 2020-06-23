@@ -81,6 +81,12 @@
         - ansible-test-network-integration-eos-network_cli-python27:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python27-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python27-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python27-stable29:
             vars:
               ansible_test_collections: true
@@ -91,6 +97,12 @@
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-network_cli-python35:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python35-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python35-stable210:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python35-stable29:
@@ -105,6 +117,12 @@
         - ansible-test-network-integration-eos-network_cli-python36:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python36-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python36-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python36-stable29:
             vars:
               ansible_test_collections: true
@@ -117,6 +135,12 @@
         - ansible-test-network-integration-eos-network_cli-python37:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python37-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python37-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python37-stable29:
             vars:
               ansible_test_collections: true
@@ -127,6 +151,12 @@
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-network_cli-python38:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python38-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python38-stable210:
             vars:
               ansible_test_collections: true
         - build-ansible-collection:
@@ -141,6 +171,12 @@
         - ansible-test-network-integration-eos-network_cli-python27:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python27-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python27-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python27-stable29:
             vars:
               ansible_test_collections: true
@@ -151,6 +187,12 @@
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-network_cli-python35:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python35-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python35-stable210:
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python35-stable29:
@@ -165,6 +207,12 @@
         - ansible-test-network-integration-eos-network_cli-python36:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python36-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python36-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python36-stable29:
             vars:
               ansible_test_collections: true
@@ -177,6 +225,12 @@
         - ansible-test-network-integration-eos-network_cli-python37:
             vars:
               ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python37-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python37-stable210:
+            vars:
+              ansible_test_collections: true
         - ansible-test-network-integration-eos-httpapi-python37-stable29:
             vars:
               ansible_test_collections: true
@@ -187,6 +241,12 @@
             vars:
               ansible_test_collections: true
         - ansible-test-network-integration-eos-network_cli-python38:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-httpapi-python38-stable210:
+            vars:
+              ansible_test_collections: true
+        - ansible-test-network-integration-eos-network_cli-python38-stable210:
             vars:
               ansible_test_collections: true
         - build-ansible-collection:
