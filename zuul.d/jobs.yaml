@@ -382,6 +382,8 @@
       - name: github.com/ansible/ansible
       - name: github.com/ansible-collections/arista.eos
     timeout: 10800
+    irrelevant-files:
+      - README.md
     vars:
       ansible_collections_repo: github.com/ansible-collections/arista.eos
       ansible_test_command: network-integration
