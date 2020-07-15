@@ -945,14 +945,17 @@
 - project-template:
     name: ansible-collections-ansible-netcommon-units
     check:
-      jobs:
+      jobs: &ansible-collections-ansible-netcommon-units-jobs
         - ansible-test-sanity-netcommon
-        - ansible-test-units-netcommon
+        - ansible-test-units-netcommon-python27
+        - ansible-test-units-netcommon-python35
+        - ansible-test-units-netcommon-python36
+        - ansible-test-units-netcommon-python37
+        - ansible-test-units-netcommon-python38
     gate:
       queue: integrated
       jobs:
-        - ansible-test-sanity-netcommon
-        - ansible-test-units-netcommon
+      jobs: *ansible-collections-ansible-netcommon-units-jobs
 
 - project-template:
     name: ansible-collections-ansible-posix-units
