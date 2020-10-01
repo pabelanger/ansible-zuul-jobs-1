@@ -23,6 +23,13 @@
     option: log_messages
     value: true
 
+- name: Enable libssh support
+  ini_file:
+    path: "{{ _test_cfg_location }}"
+    section: persistent_connection
+    option: ssh_type
+    value: libssh
+
 - name: Set ansible log path
   ini_file:
     path: "{{ _test_cfg_location }}"
