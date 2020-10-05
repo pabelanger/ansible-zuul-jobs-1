@@ -16,6 +16,18 @@
             file: '{{ _fetch.dest }}'
             name: galaxy_info
 
+    - name: Enable FIPS mode
+      become: true
+      shell: fips-mode-setup --enable
+
+    - name: Reboot server for FIPS mode
+      become: true
+      reboot:
+
+    - name: Run start-zuul-console role
+      include_role:
+        name: start-zuul-console
+
     - name: Run ansible-test
       import_role:
         name: ansible-test
