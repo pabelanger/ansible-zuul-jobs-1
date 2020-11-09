@@ -17,6 +17,17 @@
       nodes: []
 
 - job:
+    name: build-ansible-execution-environment
+    description: |
+      Build ansible execution-environment and return artifacts to zuul
+    pre-run: playbooks/build-ansible-execution-environment/pre.yaml
+    run: playbooks/build-ansible-execution-environment/run.yaml
+    post-run: playbooks/build-ansible-execution-environment/post.yaml
+    required-projects:
+      - github.com/ansible/ansible-builder
+    nodeset: centos-8-1vcpu
+
+- job:
     name: ansible-tox-docs
     parent: tox-docs
     nodeset: centos-8-1vcpu
