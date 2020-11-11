@@ -2416,3 +2416,10 @@
     vars:
       tox_envlist: ansible-base
     nodeset: fedora-latest-1vcpu
+
+- job:
+    name: ansible-buildset-registry
+    pre-run: playbooks/buildset-registry/pre.yaml
+    run: playbooks/buildset-registry/run.yaml
+    post-run: playbooks/buildset-registry/post.yaml
+    requires: docker-image
