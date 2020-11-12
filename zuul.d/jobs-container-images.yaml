@@ -36,4 +36,14 @@
     provides: container-image
     nodeset: ubuntu-bionic-1vcpu
     vars:
-      container_command: podman
+      container_command: docker
+
+- job:
+    name: ansible-upload-container-image
+    parent: ansible-build-container-image
+    description: |
+      Build and upload a container image.
+    post-run: playbooks/container-image/upload.yaml
+    secrets:
+      - name: docker_credentials
+        secret: dockerhub_ansible_zuul

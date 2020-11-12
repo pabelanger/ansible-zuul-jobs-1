@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Setup upload-docker-image role
+      include_role:
+        name: upload-docker-image
