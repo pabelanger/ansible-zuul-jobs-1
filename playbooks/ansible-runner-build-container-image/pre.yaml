@@ -1,16 +1,14 @@
 ---
 - hosts: all
   tasks:
-    - name: Setup tox role
-      include_role:
-        name: tox
-      vars:
-        tox_envlist: venv
-        tox_extra_args: -vv --notest
-        tox_install_siblings: false
+    - name: Create virtualenv for ansible-runner
+      shell: virtualenv --python=python3 ~/venv
+
+    - name: Install python dependencies
+      shell: "~/venv/bin/pip install {{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
 
     - name: Create dist files
       args:
         chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
         executable: /bin/bash
-      shell: source .tox/venv/bin/activate; make dist
+      shell: source ~/venv/bin/activate; make dist
