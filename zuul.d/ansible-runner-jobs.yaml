@@ -9,7 +9,8 @@
     vars:
       docker_images:
         - context: .
-          repository: quay.io/ansible/ansible-runner
+          docker_registry: quay.io
+          repository: ansible/ansible-runner
           tags:
             # If zuul.tag is defined: [ '3', '3.19', '3.19.0' ].  Only works for 3-component tags.
             # Otherwise: ['latest']
