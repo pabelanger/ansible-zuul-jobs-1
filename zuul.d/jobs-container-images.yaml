@@ -44,5 +44,3 @@
     description: |
       Build and upload a container image.
     post-run: playbooks/container-image/upload.yaml
-    secrets:
-      - container_registry_credentials
